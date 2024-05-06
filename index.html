@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallout.css</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./fallout.css" />
+</head>
+<body class="bg-stone-800">
+    <main class="p-4 bg-stone-900 space-y-4 bg-terminal">
+        <div class="p-1 flex gap-2">
+            <h2 class="text-2xl font-bold fo-ui fg-pb fo-glow">AP 100/100</h2>
+            <h2 class="text-2xl font-bold fo-ui fg-pb fo-blue fo-glow">AP 100/100</h2>
+            <h2 class="text-2xl font-bold fo-ui fg-pb fo-amber fo-glow">AP 100/100</h2>
+            <h2 class="text-2xl font-bold fo-ui fg-pb fo-white fo-glow">AP 100/100</h2>
+        </div>
+        <div class="text-lg fo-terminal bg-pb fg-pb fo-glow p-1">
+            <p>Welcome to Fallout.css! This is a simple page.</p>
+        </div>
+        <div class="text-lg fo-terminal bg-pb fg-pb fo-blue fo-glow p-1">
+            <p>Welcome to Fallout.css! This is a simple page.</p>
+        </div>
+        <div class="text-lg fo-terminal bg-pb fg-pb fo-amber fo-glow p-1">
+            <p>Welcome to Fallout.css! This is a simple page.</p>
+        </div>
+        <div class="text-lg fo-terminal bg-pb fg-pb fo-white fo-glow p-1">
+            <p>Welcome to Fallout.css! This is a simple page.</p>
+        </div>
+        <div role="tablist" class="fo-tabs fo-ui fo-glow">
+            <a role="tab" class="fo-tab">Stat</a>
+            <a role="tab" class="fo-tab fo-tab-active">Inv</a>
+            <a role="tab" class="fo-tab">Data</a>
+            <a role="tab" class="fo-tab">Map</a>
+            <a role="tab" class="fo-tab">Radio</a>
+        </div>
+        <button class="fo-btn fo-shadow">Button</button>
+        <button class="fo-btn fo-blue fo-shadow">Button</button>
+        <button class="fo-btn fo-amber fo-shadow">Button</button>
+        <button class="fo-btn fo-white fo-shadow">Button</button>
+        <br>
+        <ul class="fo-list fg-pb">
+            <li>Minigun</li>
+            <li>Plasma Rifle</li>
+        </ul>
+        <progress
+            class="w-56 fo-progress fo-shadow"
+            value="5"
+            max="10"></progress>
+        <br>
+        <progress
+            class="w-56 fo-progress fo-blue fo-shadow"
+            value="5"
+            max="10"></progress>
+        <br>
+        <progress
+            class="w-56 fo-progress fo-amber fo-shadow"
+            value="5"
+            max="10"></progress>
+        <br>
+        <progress
+            class="w-56 fo-progress fo-white fo-shadow"
+            value="5"
+            max="10"></progress>
+        <br>
+    </main>
+    <script>
+        const tabs = document.querySelectorAll('.fo-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('fo-tab-active'));
+                tab.classList.add('fo-tab-active');
+            });
+        });
+    </script>
+</body>
+</html>

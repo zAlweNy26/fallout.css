@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Share+Tech&display=swap');
+
+:root {
+    --fg-pb-green: rgba(26, 255, 128, 1);
+    --bg-pb-green: rgba(26, 255, 128, 0.25);
+    --fg-pb-blue: rgba(46, 207, 255, 1);
+    --bg-pb-blue: rgba(46, 207, 255, 0.25);
+    --fg-pb-amber: rgba(255, 182, 66, 1);
+    --bg-pb-amber: rgba(255, 182, 66, 0.25);
+    --fg-pb-white: rgba(192, 255, 255, 1);
+    --bg-pb-white: rgba(192, 255, 255, 0.25);
+
+    --fo-fg: var(--fg-pb-green);
+    --fo-bg: var(--bg-pb-green);
+}
+
+.fo-blue {
+    --fo-fg: var(--fg-pb-blue);
+    --fo-bg: var(--bg-pb-blue);
+}
+
+.fo-amber {
+    --fo-fg: var(--fg-pb-amber);
+    --fo-bg: var(--bg-pb-amber);
+}
+
+.fo-white {
+    --fo-fg: var(--fg-pb-white);
+    --fo-bg: var(--bg-pb-white);
+}
+
+.fo-ui {
+    font-family: 'Roboto', sans-serif, system-ui;
+}
+
+.fo-terminal {
+    font-family: 'Share Tech', monospace, system-ui;
+}
+
+.fg-pb {
+    color: var(--fo-fg);
+}
+
+.bg-pb {
+    background-color: var(--fo-bg);
+}
+
+.fo-glow {
+    text-shadow: 0 0 .25rem var(--fo-fg), 0 0 1rem var(--fo-fg);
+}
+
+.fo-shadow {
+    box-shadow: 0 0 .25rem var(--fo-bg), 0 0 1rem var(--fo-bg);
+}
+
+.bg-terminal {
+    position: relative;
+}
+
+.bg-terminal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+}
+
+.fo-progress {
+    background-color: transparent;
+    border: 2px solid var(--fo-fg);
+    border-radius: 0;
+    height: 1rem;
+
+    &::-webkit-progress-bar {
+        background-color: transparent;
+    }
+    &::-webkit-progress-value {
+        background-color: var(--fo-fg);
+        border-radius: 0;
+    }
+    &::-moz-progress-bar {
+        background-color: var(--fo-fg);
+        border-radius: 0;
+    }
+    &:indeterminate::-moz-progress-bar {
+        background-color: transparent;
+    }
+}
+
+.fo-tabs {
+    display: grid;
+    align-items: flex-start;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.fo-tabs::before {
+    content: "";
+    position: absolute;
+    border-top: 2px solid var(--fo-fg);
+    border-left: 2px solid var(--fo-fg);
+    width: 2rem;
+    height: 8px;
+    bottom: -6px;
+    left: 0;
+}
+
+.fo-tabs::after {
+    content: "";
+    position: absolute;
+    border-top: 2px solid var(--fo-fg);
+    border-right: 2px solid var(--fo-fg);
+    width: 2rem;
+    height: 8px;
+    bottom: -6px;
+    right: 0;
+}
+
+.fo-tab {
+    position: relative;
+    grid-row-start: 1;
+    display: inline-flex;
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 2rem;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--fo-fg);
+    border-color: var(--fo-fg);
+    border-bottom-width: 2px;
+}
+
+.fo-tab-active {
+    border-bottom-width: 0;
+}
+
+.fo-tab-active::before {
+    content: "";
+    position: absolute;
+    border-top: 2px solid var(--fo-fg);
+    border-left: 2px solid var(--fo-fg);
+    width: 8px;
+    height: 60%;
+    bottom: 0;
+    left: 0;
+}
+
+.fo-tab-active::after {
+    content: "";
+    position: absolute;
+    border-top: 2px solid var(--fo-fg);
+    border-right: 2px solid var(--fo-fg);
+    width: 8px;
+    height: 60%;
+    bottom: 0;
+    right: 0;
+}
+
+.fo-btn {
+    display: inline-flex;
+    cursor: pointer;
+    text-transform: uppercase;
+    user-select: none;
+    appearance: none;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: var(--fo-fg);
+    padding: 0.25rem;
+}
+
+.fo-list > li {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.fo-list > li:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: var(--fo-fg);
+}
