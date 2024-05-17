@@ -33,7 +33,7 @@
     font-family: 'Share Tech Mono', monospace, system-ui;
 }
 
-.fo-terminal *::selection {
+.fo-selection *::selection {
     background-color: rgb(var(--fo-fg));
     color: black;
 }
@@ -198,4 +198,75 @@
     width: 6px;
     height: 6px;
     background-color: rgb(var(--fo-fg));
+}
+
+.fo-input[type=text], textarea.fo-input {
+    background-color: rgb(var(--fo-bg));
+    color: rgb(var(--fo-fg));
+    padding: 0 0.25rem;
+    outline: none;
+}
+
+.fo-input[type=text]::placeholder, textarea.fo-input::placeholder {
+    color: rgb(var(--fo-fg), 0.625);
+}
+
+.fo-select {
+    background-color: rgb(var(--fo-bg));
+    color: rgb(var(--fo-fg));
+    padding: 0.125rem;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.fo-select optgroup {
+    color: initial;
+}
+
+.fo-input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.fo-input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: rgb(var(--fo-bg));
+}
+
+.fo-input[type=range]::-moz-range-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    height: 1.5rem;
+    background: rgb(var(--fo-bg));
+}
+
+.fo-input[type=range]::-ms-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: rgb(var(--fo-bg));
+}
+
+.fo-input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: linear-gradient(to top, rgb(var(--fo-fg)), rgb(var(--fo-bg)));
+    margin: 0.125rem;
+    height: 1.25rem;
+    width: 0.5rem;
+}
+
+.fo-input[type=range]::-moz-range-thumb {
+    border: none;
+    border-radius: 0;
+    background-image: linear-gradient(to top, rgb(var(--fo-fg)), rgb(var(--fo-bg)));
+    height: 1.25rem;
+    width: 0.5rem;
 }
