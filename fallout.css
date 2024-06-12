@@ -42,6 +42,12 @@
     color: rgb(var(--fo-fg));
 }
 
+.fo-link {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
 .bg-pb {
     background-color: rgba(var(--fo-bg));
 }
